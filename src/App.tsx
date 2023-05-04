@@ -42,7 +42,7 @@ function App() {
 						</form>
 					</div>
 					<div className="border-black border-l-2 px-6">
-						<h1 className="mb-4 text-2xl w-full">Deniz Burduroglu</h1>
+						<h1 className="mb-4 text-2xl w-full serif">Deniz Burduroglu</h1>
 						<p className="mb-8">Full-Stack Developer</p>
 						<div className="grid grid-cols-2">
 							<p className="mb-4">RESIDENCE:</p>

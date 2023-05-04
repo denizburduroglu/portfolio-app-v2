@@ -10,6 +10,16 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "Gothic";
+  src: url("./fonts/LeagueGothic-Regular-VariableFont_wdth.ttf");
+}
+
+@font-face {
+  font-family: "PT Serif";
+  src: url("./fonts/PTSerif-Regular.ttf");
+}
+
 @layer components {
   .card {
     background-color: theme('colors.white');
