@@ -1,6 +1,9 @@
 import "./App.css";
 import Navbar from "./components/Navbar";
 import emailIcon from "./assets/icons/email_icon.svg";
+import githubIcon from "./assets/icons/github_icon.svg";
+import linkedinIcon from "./assets/icons/linkedin_icon.svg";
+
 function App() {
 	return (
 		<div>
@@ -58,14 +61,35 @@ function App() {
                 denizburduroglu@gmail.com
               </p>
             </div>
-            <a
-              href="https://github.com/denizburduroglu"
-              aria-label="GitHub"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <img src={emailIcon} alt=""/>
-            </a>
+            <div className="grid grid-cols-3">
+              <a
+                href="https://github.com/denizburduroglu"
+                aria-label="GitHub"
+                target="_blank"
+                rel="noreferrer"
+                className="w-10"
+              >
+                <img src={githubIcon} alt=""/>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/deniz-burduroglu/"
+                aria-label="Linkedin"
+                target="_blank"
+                rel="noreferrer"
+                className="w-10"
+              >
+                <img src={linkedinIcon} alt=""/>
+              </a>
+              <a
+                href="mailto:denizburduroglu@gmail.com"
+                aria-label="Linkedin"
+                target="_blank"
+                rel="noreferrer"
+                className="w-10"
+              >
+                <img src={emailIcon} alt=""/>
+              </a>
+            </div>
           </div>
         </div>
 			</section>
