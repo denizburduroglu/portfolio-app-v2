@@ -1,10 +1,10 @@
 import "./App.css";
 import Navbar from "./components/Navbar";
-
+import emailIcon from "./assets/icons/email_icon.svg";
 function App() {
 	return (
 		<div>
-			{/* <Navbar /> */}
+			<Navbar />
 	
 			<section className="bg-gray-200">
 				<h1>About</h1>
@@ -58,6 +58,14 @@ function App() {
                 denizburduroglu@gmail.com
               </p>
             </div>
+            <a
+              href="https://github.com/denizburduroglu"
+              aria-label="GitHub"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img src={emailIcon} alt=""/>
+            </a>
           </div>
         </div>
 			</section>
