@@ -1,18 +1,50 @@
 /** @type {import('tailwindcss').Config} */
-const { fontFamily } = require('tailwindcss/defaultTheme')
+const { defaultTheme } = require('tailwindcss/defaultTheme')
+
 export default {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
     extend: {
-      fontFamily: {
-        ...fontFamily,
-        sans: ['Gothic', 'sans-serif'],
-        serif: ['PT Serif', 'serif'],
-      }
+      colors: {
+        
+      },
+      typography: (theme) => ({
+        DEFAULT: {
+          css: {
+            h1: {
+              fontSize: '2.25rem',
+              fontFamily: ['Lato', 'sans-serif'],
+            },
+            h2: {
+              fontSize: '1.75rem',
+              fontFamily: ['Lato', 'sans-serif'],
+            },
+            h3: {
+              fontSize: '1.5rem',
+              fontFamily: ['Lato', 'sans-serif'],
+            },
+            p: {
+              fontSize: '1rem',
+              fontFamily: ['Crimson Text', 'serif'],
+            },
+            // strong: {
+            //   color: theme('colors.gray.800'),
+            // },
+            // a: {
+            //   color: theme('colors.green.500'),
+            //   '&:hover': {
+            //     color: theme('colors.green.600')
+            //   },
+            // },
+          },
+        },
+      })
     },
   },
-  plugins: []
+  plugins: [
+    require('@tailwindcss/typography'),
+  ]
 }
 

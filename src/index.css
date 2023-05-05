@@ -11,13 +11,13 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: "Gothic";
-  src: url("./fonts/LeagueGothic-Regular-VariableFont_wdth.ttf");
+  font-family: "Lato";
+  src: url("./fonts/Lato-Regular.ttf");
 }
 
 @font-face {
-  font-family: "PT Serif";
-  src: url("./fonts/PTSerif-Regular.ttf");
+  font-family: "Crimson Text";
+  src: url("./fonts/CrimsonText-Regular.ttf");
 }
 
 @layer components {
@@ -28,4 +28,13 @@
     box-shadow: theme('boxShadow.xl');
   }
   /* ... */
+}
+
+
+
+li:before {
+  content: "> ";
+  font-weight: 500;
+  color: red;
+  /* padding-right: 5px; */
 }
