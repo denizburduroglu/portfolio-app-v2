@@ -73,7 +73,7 @@ function App() {
 							</a>
 						</div>
 					</div>
-					{resume.slice(experienceIndex, experienceIndex + 1).map((experience: any, i) => {
+					{resume.slice(experienceIndex, experienceIndex + 1).map((experience: any) => {
 						return <Experience experience={experience} key={experienceIndex} />;
 					})}
 				</section>
