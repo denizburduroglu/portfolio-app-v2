@@ -22,18 +22,13 @@ function App() {
 						<h1 className="mb-4 text-4xl w-full">About</h1>
 					</div>
 
-					<div className="grid grid-cols-8 px-6 mb-8">
-						<div className="col-span-4">
-							Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus quaerat ipsam asperiores in numquam ipsa qui corrupti, debitis odio
-							adipisci, excepturi vero placeat minima laboriosam! Veritatis, officiis. Accusamus, dolore aperiam! Lorem ipsum dolor sit amet,
-							consectetur adipisicing elit. Et cumque nemo magnam? Cupiditate eos vero accusantium sapiente rerum consequuntur cum, recusandae
-							repellat perspiciatis placeat ut voluptas. Consequuntur odio ullam ea?
-						</div>
-						<div className="col-span-1"></div>
-						<div className="col-span-3">
-							<img src={treesImage} className="w-64 mb-4 border-black border-4" alt="" />
-							<div className="grid grid-cols-2">
-								<div>
+					<div className="grid grid-cols-8 px-6 mb-8 grid-flow-col">
+						<div className="col-span-8 md:col-span-4">
+							<p>
+								Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae, autem aperiam neque velit obcaecati dolore. At quasi officia autem aliquam. Rerum repellendus sit molestiae minima architecto eum provident, sequi consequatur.
+							</p>
+							<div className="flex mb-8">
+								<div className="w-36">
 									<ul>
 										<li>JavaScript</li>
 										<li>TypeScript</li>
@@ -50,6 +45,10 @@ function App() {
 									</ul>
 								</div>
 							</div>
+						</div>
+						<div className="col-span-1"></div>
+						<div className="col-span-6 md:col-span-3">
+							<img src={treesImage} className="w-64 mb-4 border-black border-4" alt="" />
 						</div>
 					</div>
 				</section>
