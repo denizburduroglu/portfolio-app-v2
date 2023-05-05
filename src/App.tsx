@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar";
 import "./App.css";
 import { resume } from "./data/Resume.ts";
 import Experience from "./components/Experience.component.tsx";
+import ResumePDF from './assets/pdf/resume.pdf';
 
 function App() {
 	const [experienceIndex, setExperienceIndex] = useState(0);
@@ -17,20 +18,19 @@ function App() {
 					<h1>Home</h1>
 					<img src={treesImage} className="w-48" alt="" />
 				</section>
-				<section className="bg-gray-200 w-screen container px-4 mx-auto">
-					<div className="px-6 mb-8">
+				<section className="bg-gray-200 w-screen container px-10 mx-auto">
+					<div className="mb-8">
 						<h1 className="mb-4 text-4xl w-full">About</h1>
 					</div>
 
-					<div className="grid grid-cols-8 px-6 mb-8 grid-flow-col">
-						<div className="col-span-8 md:col-span-4">
+					<div className="grid grid-cols-1 md:grid-cols-2 mb-8">
+						<div>
 							<p>
 								Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae, autem aperiam neque velit obcaecati dolore. At quasi officia autem aliquam. Rerum repellendus sit molestiae minima architecto eum provident, sequi consequatur.
 							</p>
 							<div className="flex mb-8">
 								<div className="w-36">
 									<ul>
-										<li>JavaScript</li>
 										<li>TypeScript</li>
 										<li>Angular</li>
 										<li>React</li>
@@ -41,20 +41,18 @@ function App() {
 										<li>C#</li>
 										<li>.NET</li>
 										<li>GraphQL</li>
-										<li>Rest APIs</li>
 									</ul>
 								</div>
 							</div>
 						</div>
-						<div className="col-span-1"></div>
-						<div className="col-span-6 md:col-span-3">
+						<div className="mx-auto">
 							<img src={treesImage} className="w-64 mb-4 border-black border-4" alt="" />
 						</div>
 					</div>
 				</section>
 
-				<section className="bg-gray-300 w-screen container px-4 mx-auto">
-					<div className="grid grid-cols-4 px-6 mb-8">
+				<section className="bg-gray-300 w-screen container px-10 mx-auto">
+					<div className="grid grid-cols-4 mb-8">
 						<h1 className="mb-4 text-4xl w-full">Experience</h1>
 						<div className="col-span-2 flex items-center justify-end">
 							<button disabled={experienceIndex <= 0} onClick={() => setExperienceIndex(experienceIndex - 1)} className="disabled:opacity-50">
@@ -70,9 +68,9 @@ function App() {
 							</button>
 						</div>
 						<div className="col-span-1 flex items-center justify-end">
-							<button>
+							<a href={ResumePDF} download="Resume.pdf">
 								<AiOutlineDownload className="w-6 h-6" />
-							</button>
+							</a>
 						</div>
 					</div>
 					{resume.slice(experienceIndex, experienceIndex + 1).map((experience: any, i) => {
@@ -80,8 +78,10 @@ function App() {
 					})}
 				</section>
 
-				<section className="bg-gray-400">
-					<h1 className="mb-4 text-4xl w-full">Projects</h1>
+				<section className="w-screen container px-4 mx-auto bg-gray-400">
+					<div className="px-6">
+						<h1 className="mb-4 text-4xl w-full">Projects</h1>
+					</div>
 				</section>
 
 				<section id="contact" className="h-screen w-screen container px-4 mx-auto">

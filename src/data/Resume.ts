@@ -1,6 +1,6 @@
-import { ExperienceProps } from "../components/Experience.component";
+import { IExperience } from "../components/Experience.component";
 
-export const resume: ExperienceProps[] = [
+export const resume: IExperience[] = [
   {
     fromDate: 'Feb 2023',
     toDate: 'Present',

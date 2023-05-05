@@ -16,7 +16,7 @@ export type ExperienceProps = {
 const Experience: React.FC<ExperienceProps> = (props) => {
 	return (
 		<>
-			<div className="grid grid-cols-2 px-6 mb-4">
+			<div className="grid grid-cols-2 mb-4">
 				<div>
 					<h2 className="text-2xl">{props.experience.establishment}</h2>
 				</div>
@@ -26,7 +26,7 @@ const Experience: React.FC<ExperienceProps> = (props) => {
 					</h2>
 				</div>
 			</div>
-			<div className="px-6">
+			<div>
 				{/* Create a lorem ipsum list of items */}
 				<div className="mb-2">
 					{props.experience.summary}
