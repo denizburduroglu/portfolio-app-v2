@@ -1,11 +1,6 @@
 import { useState } from "react";
-import emailIcon from "./assets/icons/email_icon.svg";
-import githubIcon from "./assets/icons/github_icon.svg";
-import linkedinIcon from "./assets/icons/linkedin_icon.svg";
-import leftArrowIcon from "./assets/icons/arrow_back_left_icon.svg";
-import rightArrowIcon from "./assets/icons/arrow_next_right_icon.svg";
+import { AiFillGithub, AiFillLinkedin, AiFillMail, AiOutlineLeft, AiOutlineRight, AiOutlineDownload } from "react-icons/ai";
 import treesImage from "./assets/images/trees.jpg";
-import arrowDownloadIcon from "./assets/icons/arrow_download_icon.svg";
 import Navbar from "./components/Navbar";
 import "./App.css";
 import { resume } from "./data/Resume.ts";
@@ -44,7 +39,6 @@ function App() {
 										<li>TypeScript</li>
 										<li>Angular</li>
 										<li>React</li>
-										<li>Node.js</li>
 									</ul>
 								</div>
 								<div>
@@ -53,7 +47,6 @@ function App() {
 										<li>.NET</li>
 										<li>GraphQL</li>
 										<li>Rest APIs</li>
-										<li>Sql Server</li>
 									</ul>
 								</div>
 							</div>
@@ -65,16 +58,21 @@ function App() {
 					<div className="grid grid-cols-4 px-6 mb-8">
 						<h1 className="mb-4 text-4xl w-full">Experience</h1>
 						<div className="col-span-2 flex items-center justify-end">
-							<button className="" onClick={() => setExperienceIndex(experienceIndex - 1)}>
-								<img src={leftArrowIcon} className="w-12 h-8 border-black border-2 mr-2" alt="" />
+							<button disabled={experienceIndex <= 0} onClick={() => setExperienceIndex(experienceIndex - 1)} className="disabled:opacity-50">
+								<AiOutlineLeft className="w-6 h-6" />
 							</button>
-							<button onClick={() => setExperienceIndex(experienceIndex + 1)}>
-								<img src={rightArrowIcon} className="w-12 h-8 border-black border-2" alt="" />
+							{experienceIndex + 1}/{resume.length}
+							<button
+								disabled={experienceIndex >= resume.length - 1}
+								onClick={() => setExperienceIndex(experienceIndex + 1)}
+								className="disabled:opacity-50"
+							>
+								<AiOutlineRight className="w-6 h-6" />
 							</button>
 						</div>
 						<div className="col-span-1 flex items-center justify-end">
 							<button>
-								<img src={arrowDownloadIcon} className="w-12 h-8 border-black border-2" alt="" />
+								<AiOutlineDownload className="w-6 h-6" />
 							</button>
 						</div>
 					</div>
@@ -94,7 +92,7 @@ function App() {
 					</div>
 
 					<div className="grid grid-cols-2">
-						<div className="px-6">
+						<div className="flex px-6">
 							<form className="space-y-8" target="_blank" action="https://formsubmit.co/denizburduroglu@gmail.com" method="POST">
 								<input type="text" name="name" className="border-black border-b-2 w-full p-y-2" placeholder="Name" required />
 								<input type="email" name="email" className="border-black border-b-2 w-full p-y-2" placeholder="Email Address" required />
@@ -115,15 +113,15 @@ function App() {
 								<p className="mb-4">E-MAIL:</p>
 								<p>denizburduroglu@gmail.com</p>
 							</div>
-							<div className="grid grid-cols-3">
-								<a href="https://github.com/denizburduroglu" aria-label="GitHub" target="_blank" rel="noreferrer" className="w-10">
-									<img src={githubIcon} alt="" />
+							<div className="flex">
+								<a href="https://github.com/denizburduroglu" aria-label="GitHub" target="_blank" rel="noreferrer" className="p-1">
+									<AiFillGithub className="w-11 h-11" />
 								</a>
-								<a href="https://www.linkedin.com/in/deniz-burduroglu/" aria-label="Linkedin" target="_blank" rel="noreferrer" className="w-10">
-									<img src={linkedinIcon} alt="" />
+								<a href="https://www.linkedin.com/in/deniz-burduroglu/" aria-label="Linkedin" target="_blank" rel="noreferrer" className="p-1">
+									<AiFillLinkedin className="w-11 h-11" />
 								</a>
-								<a href="mailto:denizburduroglu@gmail.com" aria-label="Linkedin" target="_blank" rel="noreferrer" className="w-10">
-									<img src={emailIcon} alt="" />
+								<a href="mailto:denizburduroglu@gmail.com" aria-label="Linkedin" target="_blank" rel="noreferrer" className="p-1">
+									<AiFillMail className="w-11 h-11" />
 								</a>
 							</div>
 						</div>
