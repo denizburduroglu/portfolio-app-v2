@@ -1,11 +1,12 @@
 import { useState } from "react";
-import { AiFillGithub, AiFillLinkedin, AiFillMail, AiOutlineLeft, AiOutlineRight, AiOutlineDownload } from "react-icons/ai";
+import { AiOutlineLeft, AiOutlineRight, AiOutlineDownload } from "react-icons/ai";
 import treesImage from "./assets/images/trees.jpg";
 import Navbar from "./components/Navbar";
 import "./App.css";
 import { resume } from "./data/Resume.ts";
 import Experience from "./components/Experience.component.tsx";
-import ResumePDF from './assets/pdf/resume.pdf';
+import ResumePDF from "./assets/pdf/resume.pdf";
+import Footer from "./components/Footer.tsx";
 
 function App() {
 	const [experienceIndex, setExperienceIndex] = useState(0);
@@ -18,15 +19,16 @@ function App() {
 					<h1>Home</h1>
 					<img src={treesImage} className="w-48" alt="" />
 				</section>
-				<section className="bg-gray-200 w-screen container px-10 mx-auto">
+				<section className="bg-gray-200 container px-10 mx-auto">
 					<div className="mb-8">
-						<h1 className="mb-4 text-4xl w-full">About</h1>
+						<h1 className="mb-4 text-4xl">About</h1>
 					</div>
 
 					<div className="grid grid-cols-1 md:grid-cols-2 mb-8">
 						<div>
 							<p>
-								Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae, autem aperiam neque velit obcaecati dolore. At quasi officia autem aliquam. Rerum repellendus sit molestiae minima architecto eum provident, sequi consequatur.
+								Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae, autem aperiam neque velit obcaecati dolore. At quasi officia autem
+								aliquam. Rerum repellendus sit molestiae minima architecto eum provident, sequi consequatur.
 							</p>
 							<div className="flex mb-8">
 								<div className="w-36">
@@ -51,10 +53,10 @@ function App() {
 					</div>
 				</section>
 
-				<section className="bg-gray-300 w-screen container px-10 mx-auto">
-					<div className="grid grid-cols-4 mb-8">
-						<h1 className="mb-4 text-4xl w-full">Experience</h1>
-						<div className="col-span-2 flex items-center justify-end">
+				<section className="bg-gray-300 container px-10 mx-auto">
+					<div className="grid grid-cols-1 md:grid-cols-2 mb-8">
+						<h1 className="mb-4 text-4xl">Experience</h1>
+						<div className="flex items-center md:justify-end">
 							<button disabled={experienceIndex <= 0} onClick={() => setExperienceIndex(experienceIndex - 1)} className="disabled:opacity-50">
 								<AiOutlineLeft className="w-6 h-6" />
 							</button>
@@ -66,9 +68,7 @@ function App() {
 							>
 								<AiOutlineRight className="w-6 h-6" />
 							</button>
-						</div>
-						<div className="col-span-1 flex items-center justify-end">
-							<a href={ResumePDF} download="Resume.pdf">
+							<a className="ml-4" href={ResumePDF} download="Resume.pdf">
 								<AiOutlineDownload className="w-6 h-6" />
 							</a>
 						</div>
@@ -78,20 +78,16 @@ function App() {
 					})}
 				</section>
 
-				<section className="w-screen container px-4 mx-auto bg-gray-400">
-					<div className="px-6">
-						<h1 className="mb-4 text-4xl w-full">Projects</h1>
-					</div>
+				<section className="container px-10 mx-auto bg-gray-400">
+					<h1 className="mb-4 text-4xl">Projects</h1>
 				</section>
 
-				<section id="contact" className="h-screen w-screen container px-4 mx-auto">
-					<div className="px-6">
-						<h1 className="mb-4 text-4xl w-full">Contact</h1>
-						<p className="mb-8">Get in touch.</p>
-					</div>
+				<section id="contact" className="container px-10 mx-auto">
+					<h1 className="mb-4 text-4xl">Contact</h1>
+					<p className="mb-8">Get in touch.</p>
 
-					<div className="grid grid-cols-2">
-						<div className="flex px-6">
+					<div className="grid grid-cols-1 md:grid-cols-2">
+						<div className="flex pr-0 md:pr-6 mb-6 md:mb-0">
 							<form className="space-y-8" target="_blank" action="https://formsubmit.co/denizburduroglu@gmail.com" method="POST">
 								<input type="text" name="name" className="border-black border-b-2 w-full p-y-2" placeholder="Name" required />
 								<input type="email" name="email" className="border-black border-b-2 w-full p-y-2" placeholder="Email Address" required />
@@ -101,31 +97,21 @@ function App() {
 								</button>
 							</form>
 						</div>
-						<div className="border-black border-l-2 px-6">
-							<h1 className="mb-4 text-2xl w-full serif">Deniz Burduroglu</h1>
+						<div className="border-black md:border-l-2 md:pl-6">
+							<h1 className="mb-4 text-2xl">Deniz Burduroglu</h1>
 							<p className="mb-8">Full-Stack Developer</p>
-							<div className="grid grid-cols-2">
-								<p className="mb-4">RESIDENCE:</p>
+							<div className="flex flex-col md:flex-row mb-4 md:mb-2">
+								<p className="w-28">RESIDENCE:</p>
 								<p>Oakland, CA</p>
 							</div>
-							<div className="grid grid-cols-2">
-								<p className="mb-4">E-MAIL:</p>
+							<div className="flex flex-col md:flex-row">
+								<p className="w-28">E-MAIL:</p>
 								<p>denizburduroglu@gmail.com</p>
-							</div>
-							<div className="flex">
-								<a href="https://github.com/denizburduroglu" aria-label="GitHub" target="_blank" rel="noreferrer" className="p-1">
-									<AiFillGithub className="w-11 h-11" />
-								</a>
-								<a href="https://www.linkedin.com/in/deniz-burduroglu/" aria-label="Linkedin" target="_blank" rel="noreferrer" className="p-1">
-									<AiFillLinkedin className="w-11 h-11" />
-								</a>
-								<a href="mailto:denizburduroglu@gmail.com" aria-label="Linkedin" target="_blank" rel="noreferrer" className="p-1">
-									<AiFillMail className="w-11 h-11" />
-								</a>
 							</div>
 						</div>
 					</div>
 				</section>
+				<Footer/>
 			</div>
 		</div>
 	);

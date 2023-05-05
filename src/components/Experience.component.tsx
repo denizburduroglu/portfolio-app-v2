@@ -16,11 +16,11 @@ export type ExperienceProps = {
 const Experience: React.FC<ExperienceProps> = (props) => {
 	return (
 		<>
-			<div className="grid grid-cols-2 mb-4">
+			<div className="grid grid-cols-1 md:grid-cols-2 mb-4">
 				<div>
 					<h2 className="text-2xl">{props.experience.establishment}</h2>
 				</div>
-				<div className="grid place-items-end">
+				<div className="grid md:place-items-end">
 					<h2>
 						{props.experience.fromDate}-{props.experience.toDate}
 					</h2>
