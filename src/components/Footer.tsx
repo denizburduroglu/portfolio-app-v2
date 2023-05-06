@@ -11,7 +11,7 @@ const Footer: React.FC = () => {
 						<a href="https://github.com/denizburduroglu" target="_blank" aria-label="GitHub" rel="noopener noreferrer" className="mr-4">
 							<AiFillGithub className="text-white hover:text-gray-400 transition-colors duration-300 w-6 h-6" />
 						</a>
-						<a href="https://www.linkedin.com/in/deniz-burduroglu/" target="_blank" aria-label="Linkedin" rel="noopener noreferrer" className="mr-4">
+						<a href="https://www.linkedin.com/in/denizburduroglu/" target="_blank" aria-label="Linkedin" rel="noopener noreferrer" className="mr-4">
 							<AiFillLinkedin className="text-white hover:text-gray-400 transition-colors duration-300 w-6 h-6" />
 						</a>
 						<a href="mailto:denizburduroglu@gmail.com" target="_blank" aria-label="Email" rel="noopener noreferrer">
