@@ -8,7 +8,16 @@ export default {
   theme: {
     extend: {
       colors: {
-        
+        'light-shade': '#F7F3F4',
+        'light-accent': '#BF735E',
+        'main-brand-color': '#862125', //'#8B3B3E',
+        'dark-accent': '#7B7DA5',
+        'dark-shade': '#2C1F35',
+        'success': '#5d8443',
+        'warning': '#db740b',
+        'danger': '#f44336',
+        'black': '#000000',
+        'white': '#FFFFFF',
       },
       typography: (theme) => ({
         DEFAULT: {

@@ -20,12 +20,30 @@
 	src: url("./fonts/CrimsonText-Regular.ttf");
 }
 
+@layer base {
+  html {
+    @apply text-light-shade;
+  } 
+}
+
+
 @layer components {
 	.card {
-		background-color: theme("colors.white");
-		border-radius: theme("borderRadius.lg");
-		padding: theme("spacing.6");
-		box-shadow: theme("boxShadow.xl");
+		@apply bg-light-shade rounded-md p-6 shadow-lg shadow-black text-black;
+	}
+	/* ... */
+}
+
+@layer components {
+	.input-text {
+		@apply rounded-md bg-black w-full p-2;
+	}
+	/* ... */
+}
+
+@layer components {
+	.default-btn {
+		@apply rounded-md bg-main-brand-color p-2;
 	}
 	/* ... */
 }
@@ -34,6 +52,6 @@
 li:before {
 	content: "> ";
 	font-weight: 500;
-	color: red;
+	@apply text-light-accent;
 	/* padding-right: 5px; */
 }

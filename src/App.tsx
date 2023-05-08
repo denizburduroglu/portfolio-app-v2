@@ -7,19 +7,21 @@ import { resume } from "./data/Resume.ts";
 import Experience from "./components/Experience.component.tsx";
 import ResumePDF from "./assets/pdf/resume.pdf";
 import Footer from "./components/Footer.tsx";
+import Project, { IProject } from "./components/Project.tsx";
+import { projects } from "./data/Projects.ts";
 
 function App() {
 	const [experienceIndex, setExperienceIndex] = useState(0);
 
 	return (
-		<div>
+		<div className="bg-dark-shade">
 			<Navbar />
 			<div>
-				<section className="bg-gray-100">
+				<section>
 					<h1>Home</h1>
 					<img src={treesImage} className="w-48" alt="" />
 				</section>
-				<section className="bg-gray-200 container px-10 mx-auto">
+				<section className="container px-10 mx-auto">
 					<div className="mb-8">
 						<h1 className="mb-4 text-4xl">About</h1>
 					</div>
@@ -48,12 +50,12 @@ function App() {
 							</div>
 						</div>
 						<div className="mx-auto">
-							<img src={treesImage} className="w-64 mb-4 border-black border-4" alt="" />
+							<img src={treesImage} className="rounded-md w-64 mb-4 border-black border-4" alt="" />
 						</div>
 					</div>
 				</section>
 
-				<section className="bg-gray-300 container px-10 mx-auto">
+				<section className="container px-10 mx-auto">
 					<div className="grid grid-cols-1 md:grid-cols-2 mb-8">
 						<h1 className="mb-4 text-4xl">Experience</h1>
 						<div className="flex items-center md:justify-end">
@@ -78,8 +80,20 @@ function App() {
 					})}
 				</section>
 
-				<section className="container px-10 mx-auto bg-gray-400">
+				<section className="container px-10 mx-auto">
 					<h1 className="mb-4 text-4xl">Projects</h1>
+					<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+						{
+							projects.map((project: IProject) => {
+								return (
+									<div className="p-3">
+										<Project link={project.link} title={project.title} description={project.description} techStack={project.techStack} />
+									</div>
+									
+								)
+							})
+						}
+					</div>
 				</section>
 
 				<section id="contact" className="container px-10 mx-auto">
@@ -89,10 +103,10 @@ function App() {
 					<div className="grid grid-cols-1 md:grid-cols-2">
 						<div className="flex pr-0 md:pr-6 mb-6 md:mb-0">
 							<form className="space-y-8" target="_blank" action="https://formsubmit.co/denizburduroglu@gmail.com" method="POST">
-								<input type="text" name="name" className="border-black border-b-2 w-full p-y-2" placeholder="Name" required />
-								<input type="email" name="email" className="border-black border-b-2 w-full p-y-2" placeholder="Email Address" required />
-								<textarea placeholder="Message" className="border-black border-b-2 w-full p-y-2" name="message" required></textarea>
-								<button type="submit" className="default-button bg-red-700 p-2">
+								<input type="text" name="name" className="input-text" placeholder="Name" required />
+								<input type="email" name="email" className="input-text" placeholder="Email Address" required />
+								<textarea data-max="20" placeholder="Message" className="input-text" name="message" required></textarea>
+								<button type="submit" className="default-btn">
 									Submit Form
 								</button>
 							</form>

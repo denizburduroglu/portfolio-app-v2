@@ -4,7 +4,7 @@ import { AiFillGithub, AiFillLinkedin, AiFillMail } from "react-icons/ai";
 const Footer: React.FC = () => {
 	return (
 		<>
-			<footer className="bg-gray-900 text-white py-6 px-2 mt-4">
+			<footer className="bg-black text-white py-6 px-2 mt-4">
 				<div className="container mx-auto flex justify-between items-center">
 					<p className="text-sm">&copy; Deniz Burduroglu {new Date().getFullYear()}</p>
 					<div className="flex items-center">
