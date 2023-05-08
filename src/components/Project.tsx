@@ -14,7 +14,7 @@ const Project: React.FC<IProject> = ({ link, title, description, techStack }) =>
 				<h1>{title}</h1>
 				<p>{description}</p>
 				{techStack.map((tech: string, i: number) => {
-					return <li key={i}>{tech}</li>;
+					return <span className="badge" key={i}>{tech}</span>;
 				})}
 			</div>
 		</>
