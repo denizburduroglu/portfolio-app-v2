@@ -10,6 +10,29 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Firefox */
+/* * {
+  scrollbar-width: thin;
+  scrollbar-color: blue red;
+} */
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 15px;
+}
+
+*::-webkit-scrollbar-track {
+	@apply bg-light-shade m-1;
+}
+
+*::-webkit-scrollbar-thumb {
+  @apply bg-dark-accent rounded-full bg-opacity-75;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  @apply bg-opacity-100;
+}
+
 @font-face {
 	font-family: "Lato";
 	src: url("./fonts/Lato-Regular.ttf");
@@ -29,7 +52,7 @@
 
 @layer components {
 	.card {
-		@apply bg-light-shade rounded-md p-6 shadow-lg shadow-black text-black;
+		@apply bg-light-shade rounded-md p-6 shadow-lg shadow-black text-black h-full;
 	}
 	/* ... */
 }

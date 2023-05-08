@@ -18,8 +18,7 @@ function App() {
 			<Navbar />
 			<div>
 				<section>
-					<h1>Home</h1>
-					<img src={treesImage} className="w-48" alt="" />
+						<img src={treesImage} className="w-full" alt="" />
 				</section>
 				<section className="container px-10 mx-auto">
 					<div className="mb-8">
@@ -50,7 +49,7 @@ function App() {
 							</div>
 						</div>
 						<div className="mx-auto">
-							<img src={treesImage} className="rounded-md w-64 mb-4 border-black border-4" alt="" />
+							<img src={treesImage} className="rounded-md w-96 mb-4 border-black border-4" alt="" />
 						</div>
 					</div>
 				</section>
@@ -83,16 +82,13 @@ function App() {
 				<section className="container px-10 mx-auto">
 					<h1 className="mb-4 text-4xl">Projects</h1>
 					<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-						{
-							projects.map((project: IProject) => {
-								return (
-									<div className="p-3">
-										<Project link={project.link} title={project.title} description={project.description} techStack={project.techStack} />
-									</div>
-									
-								)
-							})
-						}
+						{projects.map((project: IProject, i: number) => {
+							return (
+								<div key={i} className="p-3">
+									<Project key={i} link={project.link} title={project.title} description={project.description} techStack={project.techStack} />
+								</div>
+							);
+						})}
 					</div>
 				</section>
 
@@ -125,7 +121,7 @@ function App() {
 						</div>
 					</div>
 				</section>
-				<Footer/>
+				<Footer />
 			</div>
 		</div>
 	);

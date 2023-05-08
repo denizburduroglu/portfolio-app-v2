@@ -33,7 +33,7 @@ const Experience: React.FC<ExperienceProps> = (props) => {
 				</div>
 				<ul>
 					{
-						props.experience.items.map((item: string, i) => {
+						props.experience.items.map((item: string, i: number) => {
 							return (
 								<li key={i}>{item}</li>
 							)
