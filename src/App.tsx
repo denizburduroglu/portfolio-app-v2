@@ -9,26 +9,33 @@ import ResumePDF from "./assets/pdf/resume.pdf";
 import Footer from "./components/Footer.tsx";
 import Project, { IProject } from "./components/Project.tsx";
 import { projects } from "./data/Projects.ts";
+import React from "react";
 
 function App() {
-	const [experienceIndex, setExperienceIndex] = useState(0);
-	const observer = new IntersectionObserver((entries) => {
-		entries.forEach((entry) => {
-			if (entry.isIntersecting) {
-				entry.target.classList.add("loading-text");
-			} else {
-				entry.target.classList.remove("loading-text");
-			}
+	React.useEffect(() => {
+		const observer = new IntersectionObserver((entries) => {
+			entries.forEach((entry) => {
+				if (entry.isIntersecting) {
+					entry.target.classList.add("loading-text");
+				} else {
+					entry.target.classList.remove("loading-text");
+				}
+			});
 		});
-	});
-	const hiddenElements = document.querySelectorAll("section");
-	hiddenElements.forEach((element) => { observer.observe(element); });
+		const hiddenElements = document.querySelectorAll("section");
+		hiddenElements.forEach((element) => {
+			observer.observe(element);
+		});
+	}, []);
+
+	const [experienceIndex, setExperienceIndex] = useState(0);
+
 	return (
 		<div className="bg-dark-shade">
 			<Navbar />
 			<div>
 				<section>
-						<img src={treesImage} className="w-full" alt="" />
+					<img src={treesImage} className="w-full" alt="" />
 				</section>
 				<section className="container px-10 mx-auto">
 					<div className="mb-8">
