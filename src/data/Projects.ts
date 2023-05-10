@@ -2,38 +2,34 @@ import { IProject } from "../components/Project";
 
 export const projects: IProject[] = [
   {
-    title: 'Portfolio',
-    description: 'This website is a portfolio of my work and experience. It is built using React and TypeScript.',
-    link: '',
+    title: 'Pomodoro Timer',
+    description: 'This is a pomodoro timer that can be used to track time spent on tasks. It can be customized by its settings to change the time and intervals.',
+    link: 'https://github.com/denizburduroglu/sauce-boss',
     techStack: [
-      'React',
+      'Angular',
+      'HTML',
+      'CSS',
       'TypeScript',
     ]
   },
   {
-    title: 'Con Edison',
-    description: `Con Edison is a leading utility company that provides energy-related products to the New
-    York City area. Worked on multiple in house projects that enhance a mechanics ability to
-    complete their jobs in a safe and efficient manner.`,
-    link: '',
+    title: 'Movie Search',
+    description: `This is a movie search app that uses the OMDb API to search for movies. It is built using Angular and TypeScript. `,
+    link: 'https://github.com/denizburduroglu/master-shot-app',
     techStack: [
       'Angular',
-      'C#',
       'HTML',
+      'CSS',
+      'TypeScript',
     ]
   },
   {
-    title: 'United Biosource Corporation',
-    description: `United Biosource Corporation (UBC) is a global scientific and technology-enabled services
-    organization that provides evidence-based solutions to healthcare and life sciences
-    companies. Built web applications that maintained patient medical information and provided
-    required product dosage.`,
-    link: '',
+    title: 'Gandalf Quotes',
+    description: `This is a discord bot that displays random quotes by Gandalf from the Lord of the Rings.`,
+    link: 'https://github.com/denizburduroglu/GandalfQuoteBot',
     techStack: [
-      'Angular',
-      'C#',
-      'HTML',
-      'CSS'
+      'JavaScript',
+      'Node.js',
     ]
   },
 ];

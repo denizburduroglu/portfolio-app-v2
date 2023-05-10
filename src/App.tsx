@@ -35,9 +35,16 @@ function App() {
 			<Navbar />
 			<div>
 				<section>
-					<img src={treesImage} className="w-full" alt="" />
+					<div className="introduction h-screen grid place-items-center">
+						<div>
+							<p className="text-2xl drop-shadow-[0_1px_8px_rgba(0,0,0)] w-full">Hi, my name is</p>
+							<h1 className="text-6xl drop-shadow-[0_1px_8px_rgba(0,0,0)] w-full">Deniz Burduroglu</h1>
+							<p className="text-4xl drop-shadow-[0_1px_8px_rgba(0,0,0)] w-full">I'm a Full-Stack Developer</p>
+						</div>
+					</div>
 				</section>
-				<section className="container px-10 mx-auto">
+
+				<section className="container p-10 mx-auto">
 					<div className="mb-8">
 						<h1 className="mb-4 text-4xl">About</h1>
 					</div>
@@ -45,8 +52,13 @@ function App() {
 					<div className="grid grid-cols-1 md:grid-cols-2 mb-8">
 						<div>
 							<p>
-								Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae, autem aperiam neque velit obcaecati dolore. At quasi officia autem
-								aliquam. Rerum repellendus sit molestiae minima architecto eum provident, sequi consequatur.
+								I started my journey in software development building small websites and applications for personal projects. As I learned more about
+								programming, I discovered my passion for creating elegant, efficient code and decided to pursue a career as a developer.
+							</p>
+							<p>
+								Over the years, I've gained experience working with a wide range of programming languages, including JavaScript, TypeScript, and C#.
+								I'm comfortable working with both front-end and back-end technologies and have experience building applications using popular
+								frameworks such as React, Angular, and Node.js.
 							</p>
 							<div className="flex mb-8">
 								<div className="w-36">
@@ -71,7 +83,7 @@ function App() {
 					</div>
 				</section>
 
-				<section className="container px-10 mx-auto">
+				<section className="container p-10 mx-auto">
 					<div className="grid grid-cols-1 md:grid-cols-2 mb-8">
 						<h1 className="mb-4 text-4xl">Experience</h1>
 						<div className="flex items-center md:justify-end">
@@ -96,7 +108,7 @@ function App() {
 					})}
 				</section>
 
-				<section className="container px-10 mx-auto">
+				<section className="container p-10 mx-auto">
 					<h1 className="mb-4 text-4xl">Projects</h1>
 					<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
 						{projects.map((project: IProject, i: number) => {
@@ -109,7 +121,7 @@ function App() {
 					</div>
 				</section>
 
-				<section id="contact" className="container px-10 mx-auto">
+				<section id="contact" className="container p-10 mx-auto">
 					<h1 className="mb-4 text-4xl">Contact</h1>
 					<p className="mb-8">Get in touch.</p>
 

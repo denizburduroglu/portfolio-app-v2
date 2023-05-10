@@ -52,7 +52,13 @@
 
 @layer components {
 	.card {
-		@apply bg-light-shade rounded-md p-6 shadow-lg shadow-black text-black h-full;
+		transition: transform 0.3s ease;
+		@apply grid bg-light-shade rounded-md p-6 shadow-md shadow-black text-black h-full;
+	}
+
+	.card:hover {
+		transform: translateY(-10px);
+		@apply shadow-main-brand-color shadow-md;
 	}
 	/* ... */
 }

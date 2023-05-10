@@ -7,6 +7,13 @@ export default {
   ],
   theme: {
     extend: {
+      'height': {
+        'screen-1/2': '50vh',
+        'screen-1/3': '33.333333vh',
+        'screen-2/3': '66.666667vh',
+        'screen-1/4': '25vh',
+        'screen-3/4': '75vh',
+      },
       colors: {
         'light-shade': '#F7F3F4',
         'light-accent': '#BF735E',
@@ -37,16 +44,7 @@ export default {
             p: {
               fontSize: '1rem',
               fontFamily: ['Crimson Text', 'serif'],
-            },
-            // strong: {
-            //   color: theme('colors.gray.800'),
-            // },
-            // a: {
-            //   color: theme('colors.green.500'),
-            //   '&:hover': {
-            //     color: theme('colors.green.600')
-            //   },
-            // },
+            }
           },
         },
       })
