@@ -2,3 +2,13 @@
   background-image: url('./assets/images/trees.jpg');
   background-size: cover;
 }
+
+/* Fix for header going over section in href */
+#introduction,
+#about,
+#experience,
+#projects,
+#contact::before { 
+  margin-top: -4.75rem; 
+  padding-top: 4.75rem; 
+}
