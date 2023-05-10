@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { AiOutlineLeft, AiOutlineRight, AiOutlineDownload } from "react-icons/ai";
-import treesImage from "./assets/images/trees.jpg";
 import profileImage from "./assets/images/profile.jpg";
 import Navbar from "./components/Navbar";
 import "./App.css";
