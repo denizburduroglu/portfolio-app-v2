@@ -16,7 +16,7 @@ export default {
       },
       colors: {
         'light-shade': '#F7F3F4',
-        'light-accent': '#BF735E',
+        // 'light-accent': '#BF735E',
         'main-brand-color': '#862125', //'#8B3B3E',
         'dark-accent': '#7B7DA5',
         'dark-shade': '#2C1F35',
