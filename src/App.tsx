@@ -34,7 +34,7 @@ function App() {
 		<div className="bg-dark-shade">
 			<Navbar />
 			<div>
-				<section id="introduction">
+				<section id="introduction" className="mb-10">
 					<div className="introduction h-screen-1/2 grid place-items-center">
 						<div>
 							<p className="text-2xl drop-shadow-[0_1px_8px_rgba(0,0,0)] w-full">Hi, my name is</p>
@@ -44,7 +44,7 @@ function App() {
 					</div>
 				</section>
 
-				<section id="about" className="loading-animation container p-10 mx-auto">
+				<section id="about" className="loading-animation container p-10 mx-auto mb-6">
 					<div className="mb-8">
 						<h1 className="mb-4 text-4xl">About</h1>
 					</div>
@@ -83,7 +83,7 @@ function App() {
 					</div>
 				</section>
 
-				<section id="experience" className="loading-animation container p-10 mx-auto">
+				<section id="experience" className="loading-animation container p-10 mx-auto mb-6">
 					<div className="grid grid-cols-1 md:grid-cols-2 mb-8">
 						<h1 className="mb-4 text-4xl">Experience</h1>
 						<div className="flex items-center md:justify-end">
@@ -108,7 +108,7 @@ function App() {
 					})}
 				</section>
 
-				<section id="projects" className="loading-animation container p-10 mx-auto">
+				<section id="projects" className="loading-animation container p-10 mx-auto mb-6">
 					<h1 className="mb-4 text-4xl">Projects</h1>
 					<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
 						{projects.map((project: IProject, i: number) => {
@@ -121,7 +121,7 @@ function App() {
 					</div>
 				</section>
 
-				<section id="contact" className="loading-animation container p-10 mx-auto">
+				<section id="contact" className="loading-animation container p-10 mx-auto mb-6">
 					<h1 className="mb-4 text-4xl">Contact</h1>
 					<p className="mb-8">Get in touch.</p>
 

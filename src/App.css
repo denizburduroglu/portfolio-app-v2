@@ -12,3 +12,23 @@
   margin-top: -4.75rem; 
   padding-top: 4.75rem; 
 }
+
+/* Side panel CSS  */
+.hide-side-panel {
+  transform: translateX(100%);
+  visibility: hidden;
+}
+
+.show-side-panel {
+  transform: translateX(0);
+  visibility: visible;
+  
+}
+
+.show-side-panel {
+  transition: transform 300ms ease;
+}
+
+.show-side-panel-background {
+  visibility: visible;
+}

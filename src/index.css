@@ -99,6 +99,11 @@
   }
 }
 
+html {
+	-webkit-tap-highlight-color:transparent;
+}
+
+
 .loading-text {
   animation: loading 1s 1 ease-in-out;
 }
