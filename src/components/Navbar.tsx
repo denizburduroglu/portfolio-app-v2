@@ -22,7 +22,7 @@ const Navbar: React.FC = () => {
 					</button>
 				</div>
 				<div className={`${isActive ? "show-side-panel-background" : "hide-side-panel"} fixed inset-0 bg-black bg-opacity-50`} onClick={() => setIsActive(false)} aria-hidden="true"></div>
-			<section className={`${isActive ? "show-side-panel" : "hide-side-panel"} fixed inset-y-0 right-0 w-64 bg-dark-accent border-l border-black rounded-l-3xl z-50`}>
+			<section className={`${isActive ? "show-side-panel" : "hide-side-panel"} fixed inset-y-0 right-0 w-64 bg-dark-accent border-l border-black rounded-l-md z-50`}>
 				<div className="px-4 py-8">
 				<div className="inline-grid">
 						<a href="#about" className="mt-4 lg:mt-0 hover:text-border-dark-accent mr-4" onClick={() => setIsActive(false)} >
