@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { AiOutlineLeft, AiOutlineRight, AiOutlineDownload } from "react-icons/ai";
-import profileImage from "./assets/images/profile.jpg";
+import profileImage from "./assets/images/profile.avif";
 import Navbar from "./components/Navbar";
 import "./App.css";
 import { resume } from "./data/Resume.ts";
