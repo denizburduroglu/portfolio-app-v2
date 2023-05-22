@@ -18,7 +18,7 @@ export default defineConfig({
 				background_color: "#f69435",
 				display: "standalone",
 				scope: "/",
-				start_url: "/portfolio-app-v2",
+				start_url: "/portfolio-app-v2/",
 				short_name: "Vite PWA",
 				description: "Vite PWA Demo",
 				name: "Vite PWA",
