@@ -24,17 +24,17 @@ export default defineConfig({
 				name: "Vite PWA",
 				icons: [
 					{
-						src: "/public/keyboard_icon.png",
-						sizes: "192x192",
+						src: "/public/icons/keyboard_icon_128x128.png",
+						sizes: "128x128",
 						type: "image/png",
 					},
 					{
-						src: "/public/keyboard_icon.png",
+						src: "/public/icons/keyboard_icon_512x512.png",
 						sizes: "512x512",
 						type: "image/png",
 					},
 					{
-						src: "/public/keyboard_icon.png",
+						src: "/public/icons/keyboard_icon_512x512.png",
 						sizes: "512x512",
 						type: "image/png",
 						purpose: "any maskable",
