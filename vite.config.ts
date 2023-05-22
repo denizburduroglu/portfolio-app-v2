@@ -9,8 +9,8 @@ export default defineConfig({
       registerType: 'autoUpdate',
       includeAssets: ['favicon.ico', 'robots.txt'],
       manifest: {
-        name: 'Your App Name',
-        short_name: 'App Name',
+        name: 'Deniz Burduroglu Portfolio',
+        short_name: 'Portfolio',
         start_url: '/',
         display: 'standalone',
         background_color: '#ffffff',
