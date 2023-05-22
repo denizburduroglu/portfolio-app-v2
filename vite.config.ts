@@ -26,23 +26,19 @@ export default defineConfig({
 					{
 						src: "/public/vite.svg",
 						sizes: "192x192",
-						type: "image/png",
-					},
-					{
-						src: "/public/vite.svg",
-						sizes: "256x256",
-						type: "image/png",
-					},
-					{
-						src: "/public/vite.svg",
-						sizes: "384x384",
-						type: "image/png",
+						type: "image/svg+xml",
 					},
 					{
 						src: "/public/vite.svg",
 						sizes: "512x512",
-						type: "image/png",
-					},
+						type: "image/svg+xml",
+          },
+          {
+            src: "/public/vite.svg",
+						sizes: "512x512",
+						type: "image/svg+xml",
+            purpose: 'any maskable'
+          }
 				],
 			},
 		}),
