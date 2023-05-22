@@ -32,7 +32,13 @@ export default defineConfig({
 						src: "/public/keyboard_icon.png",
 						sizes: "512x512",
 						type: "image/svg+xml",
-          }
+					},
+					{
+						src: "/public/keyboard_icon.png",
+						sizes: "512x512",
+						type: "image/svg+xml",
+						purpose: "any maskable",
+					}
 				],
 			},
 		}),
