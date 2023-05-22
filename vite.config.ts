@@ -24,17 +24,17 @@ export default defineConfig({
 				name: "Vite PWA",
 				icons: [
 					{
-						src: "/public/vite.svg",
+						src: "/src/assets/vite.svg",
 						sizes: "192x192",
 						type: "image/svg+xml",
 					},
 					{
-						src: "/public/vite.svg",
+						src: "/src/assets/vite.svg",
 						sizes: "512x512",
 						type: "image/svg+xml",
           },
           {
-            src: "/public/vite.svg",
+            src: "/src/assets/vite.svg",
 						sizes: "512x512",
 						type: "image/svg+xml",
             purpose: 'any maskable'
