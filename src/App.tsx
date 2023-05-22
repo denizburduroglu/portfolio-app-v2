@@ -78,7 +78,7 @@ function App() {
 							</div>
 						</div>
 						<div className="mx-auto">
-							<img src={profileImage} className="rounded-md w-96 mb-4 border-black border-2" alt="" />
+							<img src={profileImage} width='360px' height='360px' className="rounded-md mb-4 border-black border-2" alt="" />
 						</div>
 					</div>
 				</section>
